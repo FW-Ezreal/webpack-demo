@@ -1,0 +1,29 @@
+{
+  "name": "webpack-demo",
+  "version": "1.0.0",
+  "description": "webpack --- demo",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_DEV=development node ./bin/dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FW-Ezreal/webpack-demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FW-Ezreal/webpack-demo/issues"
+  },
+  "homepage": "https://github.com/FW-Ezreal/webpack-demo#readme",
+  "devDependencies": {
+    "webpack": "^4.40.2",
+    "webpack-cli": "^3.3.8"
+  },
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^5.2.1"
+  }
+}
