@@ -9,3 +9,11 @@
 * 开始搭建 `npm i webpack webpack-cli`
 * 设置环境变量 `npm i cross-dev`
 * 添加git上传忽略 .gitignore 内部直接写 文件名
+- [ ] `style-loader`(插入header style), `css-loader`(@import), `postcss-loader`, `less-loader` 配置postcss.config.js
+```
+  module.exports = {
+    plugins: [
+      require('autoprefixer')
+    ]
+  }
+```
