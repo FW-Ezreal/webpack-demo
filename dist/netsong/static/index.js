@@ -121,6 +121,17 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 
 /***/ }),
 
+/***/ "./src/common/kuwoJsApi.js":
+/*!*********************************!*\
+  !*** ./src/common/kuwoJsApi.js ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+eval("function sum(a, b) {\r\n  return a + b;\r\n}\r\n\r\nfunction log(data) {\r\n  console.log(`<<%= ${data} %>`)\r\n}\r\n\r\nconst tools = {\r\n  sum,\r\n  log\r\n}\r\n\r\nmodule.exports = tools;\r\n\n\n//# sourceURL=webpack:///./src/common/kuwoJsApi.js?");
+
+/***/ }),
+
 /***/ "./src/pages/index/index.js":
 /*!**********************************!*\
   !*** ./src/pages/index/index.js ***!
@@ -129,7 +140,7 @@ eval("\n\nvar stylesInDom = {};\n\nvar isOldIE = function isOldIE() {\n  var mem
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.less */ \"./src/pages/index/index.less\");\n/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_0__);\n\r\n\r\nconst oDiv = document.createElement('div');\r\noDiv.innerHTML = 'index.html'\r\ndocument.body.appendChild(oDiv);\r\n\r\nconsole.log('index.js')\n\n//# sourceURL=webpack:///./src/pages/index/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index.less */ \"./src/pages/index/index.less\");\n/* harmony import */ var _index_less__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_index_less__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _common_kuwoJsApi__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common/kuwoJsApi */ \"./src/common/kuwoJsApi.js\");\n/* harmony import */ var _common_kuwoJsApi__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_common_kuwoJsApi__WEBPACK_IMPORTED_MODULE_1__);\n\r\n\r\n// es6 -> es5\r\nconst oDiv = document.createElement('div');\r\noDiv.innerHTML = 'index.html'\r\ndocument.body.appendChild(oDiv);\r\n\r\n\r\nconsole.log('index.js', Object(_common_kuwoJsApi__WEBPACK_IMPORTED_MODULE_1__[\"sum\"])(1, 3))\n\n//# sourceURL=webpack:///./src/pages/index/index.js?");
 
 /***/ }),
 
