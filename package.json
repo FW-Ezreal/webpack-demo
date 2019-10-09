@@ -20,6 +20,7 @@
   "homepage": "https://github.com/FW-Ezreal/webpack-demo#readme",
   "devDependencies": {
     "@babel/core": "^7.6.0",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/preset-env": "^7.6.0",
     "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.6",

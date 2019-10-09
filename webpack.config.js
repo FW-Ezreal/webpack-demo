@@ -6,13 +6,13 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyWebpackPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  // optimization: {
-  //   minimizer: [
-  //     new UglifyWebpackPlugin(),
-  //     new OptimizeCSSAssetsPlugin()
-  //   ],
-  // },
-  mode: 'production',
+  optimization: {
+    minimizer: [
+      new UglifyWebpackPlugin(),
+      new OptimizeCSSAssetsPlugin()
+    ],
+  },
+  mode: 'development',
   entry: {
     'index': path.join(__dirname, 'src/index/index.js'),
     // 'main': path.join(__dirname, 'src/main/main.js'),
@@ -43,16 +43,19 @@ module.exports = {
           {loader: 'css-loader'},
           {loader: 'postcss-loader'}
         ]
+      },
+      {
+        test: /\.js$/,
+        use: {
+          loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env'], // y预设
+            plugins: [
+              '@babel/plugin-proposal-class-properties'
+            ]
+          }
+        }
       }
-      // {
-      //   test: /\.js$/,
-      //   use: {
-      //     loader: 'babel-loader',
-      //     options: {
-      //       presets: ['@babel/preset-env']
-      //     }
-      //   }
-      // }
     ]
   },
   plugins: [

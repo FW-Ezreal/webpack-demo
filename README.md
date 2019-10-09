@@ -38,4 +38,22 @@
 
 * 处理 js
   - [ ] `babel-loader @babel/core @babel/preset-env`
+      @babel/core babel/core 是核心模块
+      @babel/preset-env 高级语法转为低级语法es6 -> es5
+      es6中的高级语法
+      ``` js
+      {
+        test: /.js$/,
+        use: [
+          loader: 'babel-loader,
+          options: {
+            presets: ['@babel/preset-env'], // 预设，大插件集合
+            plugins: [
+              '@babel/plugin-proposal-class-properties' // class 语法
+            ]
+          }
+        ]
+      }
+
+      ```
 
