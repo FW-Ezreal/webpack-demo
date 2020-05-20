@@ -56,4 +56,16 @@
       }
 
       ```
-
+*  优化项1.不需要loader 进一步解析 ,2. exclude: /node_modules/
+```
+  module: {
+    noParse: /jquery/
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/
+        inclued: path.resolve('src')
+      }
+    ]
+  }
+```
