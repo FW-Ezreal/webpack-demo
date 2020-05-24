@@ -31,14 +31,43 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     {
-                        loader: 'style-loader',
-                        options: {
-                            insert: 'top'
-                        }
+                        loader: 'style-loader'
                     },
                     'css-loader'
                 ]
             },
+            // // img
+            {
+                test: /\.(jpg|png|gif|jpeg)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        limit: '1024*20',
+                        name: `[name].[hash:8].[ext]`,
+                        outputPath: 'img/',
+                        publicPath: './dist/img'
+                    }
+                }]
+            },
+            // html 中带 img
+            // {
+            //     test: /\.html$/,
+            //     use: [
+            //         {
+            //             loader: 'html-withimg-loader'
+            //         }
+            //     ]
+            // }
+
+            // less
+            {
+                test: /\.less$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'less-loader'
+                ]
+            }
         ]
     }
 }
