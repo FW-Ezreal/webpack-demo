@@ -4,13 +4,15 @@
  * **/
 
 const path = require('path');
-const CleanWebpackPlugin = require('clean-webpack-plugin').CleanWebpackPlugin;
 
+
+
+console.log('color: #00a3cc', require('babel-loader'), require('@babel/preset-env'));
 module.exports = {
     // mode: 'production',
     mode: 'development',
     entry: {
-        index: './optJs.js'
+        index: './index.js'
     },
     output: {
         filename: 'main.js',
@@ -18,25 +20,6 @@ module.exports = {
     },
     module: {
         rules: [
-          {
-            test: /\.less$/,
-            use: [
-              // 'style-loader',
-            //   MiniCssExtractPlugin.loader,
-              'css-loader',
-              'postcss-loader',
-              'less-loader'
-            ]
-          },
-          {
-            test: /\.css$/,
-            use: [
-              {loader: 'style-loader'},
-            //   MiniCssExtractPlugin.loader,
-              {loader: 'css-loader'},
-              {loader: 'postcss-loader'}
-            ]
-          },
           {
             test: /\.js$/,
             use: {

@@ -1,4 +1,3 @@
-require('./idx.css');
 
 const a = 1;
 const comment = 'commnet';
