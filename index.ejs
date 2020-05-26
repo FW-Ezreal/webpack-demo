@@ -8,5 +8,41 @@
 </head>
 <body>
     <p>hello</p>
+    <% for (var prop in htmlWebpackPlugin.options) {%>
+        <%= prop %> : <%= JSON.stringify(htmlWebpackPlugin.options[prop]) %>
+        <br>
+    <% } %>
+        <div>-----</div>
+    <% for (var prop in htmlWebpackPlugin.files) {%>
+        <%= prop %> : <%= JSON.stringify(htmlWebpackPlugin.files[prop]) %>
+        <br>
+    <% } %>
 </body>
 </html>
+
+<!-- template : "/Users/xinwei.liu/Documents/other/webpack-demo/node_modules/html-webpack-plugin/lib/loader.js!/Users/xinwei.liu/Documents/other/webpack-demo/index.ejs"
+templateContent : false
+templateParameters :
+filename : "index.html"
+hash : false
+inject : true
+scriptLoading : "blocking"
+compile : true
+favicon : false
+minify : "auto"
+cache : true
+showErrors : true
+chunks : "all"
+excludeChunks : []
+chunksSortMode : "auto"
+meta : {}
+base : false
+title : "html-webpack-plugin"
+xhtml : false
+haha : "haha"
+-----
+publicPath : ""
+js : ["index.066325.js","demo.066325.js"]
+css : ["index.css"]
+manifest :
+favicon : -->

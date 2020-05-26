@@ -6,6 +6,8 @@ const TerserWebpackPlugin = require('terser-webpack-plugin');
 const OptimizeCss = require('optimize-css-assets-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
+// console.log('%c%s', 'color: #e50000', pkg);
+
 module.exports = {
     // optimization: {
     //     minimizer: [
@@ -17,7 +19,8 @@ module.exports = {
     // mode: 'production',
 
     entry: {
-        index11: './index.js'
+        index: './index.js',
+        demo: './demo.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),
@@ -72,8 +75,15 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'html-webpack-plugin',
             template: path.resolve(__dirname, 'index.ejs'),
-            haha: 'haha'
-        })
+            haha: 'haha',
+            inject: true, // head body false true
+        }),
+        // new HtmlWebpackPlugin({
+        //     title: 'html-webpack-plugin',
+        //     template: path.resolve(__dirname, 'index.ejs'),
+        //     haha: 'haha',
+        //     inject: true, // head body false true
+        // }),
     ]
     // devServer: {
     //     port: 9090,
