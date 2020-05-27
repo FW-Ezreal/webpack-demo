@@ -7,6 +7,11 @@
     <title><%= htmlWebpackPlugin.options.haha %></title>
 </head>
 <body>
+    <% for (var prop in htmlWebpackPlugin.options.files.js) {%>
+        <script src="<%= prop %>"></script>
+    <% } %>
+
+
     <p>hello</p>
     <% for (var prop in htmlWebpackPlugin.options) {%>
         <%= prop %> : <%= JSON.stringify(htmlWebpackPlugin.options[prop]) %>

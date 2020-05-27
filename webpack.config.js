@@ -72,18 +72,25 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin(),
+        // filename 一定要表明 各自的
         new HtmlWebpackPlugin({
             title: 'html-webpack-plugin',
             template: path.resolve(__dirname, 'index.ejs'),
             haha: 'haha',
-            inject: true, // head body false true
+            // hash: true,
+            filename: 'index.html',
+            chunks: ['index'],
+            inject: false, // head body false true
         }),
-        // new HtmlWebpackPlugin({
-        //     title: 'html-webpack-plugin',
-        //     template: path.resolve(__dirname, 'index.ejs'),
-        //     haha: 'haha',
-        //     inject: true, // head body false true
-        // }),
+        new HtmlWebpackPlugin({
+            title: 'html-webpack-plugin',
+            template: path.resolve(__dirname, 'index.ejs'),
+            haha: 'haha',
+            // hash: true,
+            filename: 'demo.html',
+            chunks: ['demo'],
+            inject: false, // head body false true
+        }),
     ]
     // devServer: {
     //     port: 9090,
